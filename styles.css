@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+html {
+    background-color: #eef2f6;
+    padding: 20px;
+}
+
+/* Convierte el body directamente en la ventana centrada del chat */
+body {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.clase-titulo {
+    order: 1;
+    margin: 0;
+    font-size: 1.4rem;
+    color: #1e293b;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Burbuja de respuesta del chatbot */
+.clase-parrafo {
+    order: 2;
+    margin: 0;
+    padding: 16px;
+    min-height: 140px;
+    background-color: #f1f5f9;
+    color: #334155;
+    border-radius: 16px 16px 16px 4px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+#input-prompt {
+    order: 3;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#input-prompt:focus {
+    border-color: #4f46e5;
+}
+
+#boton-accionador {
+    order: 4;
+    padding: 12px;
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#boton-accionador:hover {
+    background-color: #4338ca;
+}
+
+a {
+    order: 5;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    order: 6;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* Oculta el ícono de imagen rota mientras src esté vacío */
+img[src=""] {
+    display: none;
+}
